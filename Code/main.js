@@ -1,13 +1,13 @@
 // Student Profile Creation Form REGEX
 
-function emailValidation(){
+function emailValidation() {
     const email = document.getElementById('std-email');
     const regExpression = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/;
-    if(!regExpression.test(email.value)){
+    if (!regExpression.test(email.value)) {
         document.querySelector("#email-invalid").style.display = "block";
         document.querySelector("#email-valid").style.display = "none";
         document.querySelector("#std-email").style.border = "solid 3px #cf2716";
-    } else{
+    } else {
         document.querySelector("#email-invalid").style.display = "none";
         document.querySelector("#email-valid").style.display = "block";
         document.querySelector("#std-email").style.border = "solid 3px #3db166";
@@ -15,110 +15,110 @@ function emailValidation(){
 }
 
 
-function passwordValidation(){
+function passwordValidation() {
     const password = document.getElementById('std-password');
     const regExpression = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,20}$/;
-    if(!regExpression.test(password.value)){
+    if (!regExpression.test(password.value)) {
         document.querySelector("#password-invalid").style.display = "block";
         document.querySelector("#password-valid").style.display = "none";
         document.querySelector("#std-password").style.border = "solid 3px #cf2716";
-    } else{
+    } else {
         document.querySelector("#password-invalid").style.display = "none";
         document.querySelector("#password-valid").style.display = "block";
         document.querySelector("#std-password").style.border = "solid 3px #3db166";
     }
 }
 
-function nameValidation(){
+function nameValidation() {
     const name = document.getElementById('std-name');
     const regExpression = /^[a-zA-Z]{3,15}\s{1}[a-zA-Z]{3,15}(\s{1}[a-zA-Z]{3,15})?$/;
-    if(!regExpression.test(name.value)){
+    if (!regExpression.test(name.value)) {
         document.querySelector("#name-invalid").style.display = "block";
         document.querySelector("#name-valid").style.display = "none";
         document.querySelector("#std-name").style.border = "solid 3px #cf2716";
-    } else{
+    } else {
         document.querySelector("#name-invalid").style.display = "none";
         document.querySelector("#name-valid").style.display = "block";
         document.querySelector("#std-name").style.border = "solid 3px #3db166";
     }
 }
 
-function genderValidation(){
-    if(document.querySelector("#std-gender").selected = true){
+function genderValidation() {
+    if (document.querySelector("#std-gender").selected = true) {
         document.querySelector("#std-gender").style.border = "solid 3px #3db166";
     }
 }
 
-function ageValidation(){
+function ageValidation() {
     const age = document.getElementById('std-age');
     const regExpression = /^(1[0-9]|20)$/;
-    if(!regExpression.test(age.value)){
+    if (!regExpression.test(age.value)) {
         document.querySelector("#age-invalid").style.display = "block";
         document.querySelector("#age-valid").style.display = "none";
         document.querySelector("#std-age").style.border = "solid 3px #cf2716";
-    } else{
+    } else {
         document.querySelector("#age-invalid").style.display = "none";
         document.querySelector("#age-valid").style.display = "block";
         document.querySelector("#std-age").style.border = "solid 3px #3db166";
     }
 }
 
-function adressValidation(){
+function adressValidation() {
     const homeadress = document.getElementById('std-adress');
     const regExpression = /^[a-z0-9\s,'-]{5,100}$/i;
-    if(!regExpression.test(homeadress.value)){
+    if (!regExpression.test(homeadress.value)) {
         document.querySelector("#adress-invalid").style.display = "block";
         document.querySelector("#adress-valid").style.display = "none";
         document.querySelector("#std-adress").style.border = "solid 3px #cf2716";
-    } else{
+    } else {
         document.querySelector("#adress-invalid").style.display = "none";
         document.querySelector("#adress-valid").style.display = "block";
         document.querySelector("#std-adress").style.border = "solid 3px #3db166";
     }
 }
 
-function phoneValidation(){
+function phoneValidation() {
     const phone = document.getElementById('std-phone');
     const regExpression = /^[1][0-9]{10}$/;
-    if(!regExpression.test(phone.value)){
+    if (!regExpression.test(phone.value)) {
         document.querySelector("#phone-invalid").style.display = "block";
         document.querySelector("#phone-valid").style.display = "none";
         document.querySelector("#std-phone").style.border = "solid 3px #cf2716";
-    } else{
+    } else {
         document.querySelector("#phone-invalid").style.display = "none";
         document.querySelector("#phone-valid").style.display = "block";
         document.querySelector("#std-phone").style.border = "solid 3px #3db166";
     }
 }
 
-function classValidation(){
-    if(document.querySelector("#std-class").selected = true){
+function classValidation() {
+    if (document.querySelector("#std-class").selected = true) {
         document.querySelector("#std-class").style.border = "solid 3px #3db166";
     }
 }
 
-function mathValidation(){
+function mathValidation() {
     const mathNote = document.getElementById('math-mark');
     const regExpression = /^([0-9]|1[0-9]|20)$/;
-    if(!regExpression.test(mathNote.value)){
+    if (!regExpression.test(mathNote.value)) {
         document.querySelector("#math-invalid").style.display = "block";
         document.querySelector("#math-valid").style.display = "none";
         document.querySelector("#math-mark").style.border = "solid 3px #cf2716";
-    } else{
+    } else {
         document.querySelector("#math-invalid").style.display = "none";
         document.querySelector("#math-valid").style.display = "block";
         document.querySelector("#math-mark").style.border = "solid 3px #3db166";
     }
 }
 
-function englishValidation(){
+function englishValidation() {
     const englishNote = document.getElementById('english-mark');
     const regExpression = /^([0-9]|1[0-9]|20)$/;
-    if(!regExpression.test(englishNote.value)){
+    if (!regExpression.test(englishNote.value)) {
         document.querySelector("#english-invalid").style.display = "block";
         document.querySelector("#english-valid").style.display = "none";
         document.querySelector("#english-mark").style.border = "solid 3px #cf2716";
-    } else{
+    } else {
         document.querySelector("#english-invalid").style.display = "none";
         document.querySelector("#english-valid").style.display = "block";
         document.querySelector("#english-mark").style.border = "solid 3px #3db166";
@@ -127,70 +127,70 @@ function englishValidation(){
 
 // Contact Form REGEX
 
-function nameContactValidation(){
+function nameContactValidation() {
     const name = document.getElementById('contact-name');
     const regExpression = /^[a-zA-Z]{3,15}\s{1}[a-zA-Z]{3,15}(\s{1}[a-zA-Z]{3,15})?$/;
-    if(!regExpression.test(name.value)){
+    if (!regExpression.test(name.value)) {
         document.querySelector("#name-invalid").style.display = "block";
         document.querySelector("#name-valid").style.display = "none";
         document.querySelector("#contact-name").style.border = "solid 3px #cf2716";
-    } else{
+    } else {
         document.querySelector("#name-invalid").style.display = "none";
         document.querySelector("#name-valid").style.display = "block";
         document.querySelector("#contact-name").style.border = "solid 3px #3db166";
     }
 }
 
-function emailConatctValidation(){
+function emailConatctValidation() {
     const email = document.getElementById('contact-email');
     const regExpression = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/;
-    if(!regExpression.test(email.value)){
+    if (!regExpression.test(email.value)) {
         document.querySelector("#email-invalid").style.display = "block";
         document.querySelector("#email-valid").style.display = "none";
         document.querySelector("#contact-email").style.border = "solid 3px #cf2716";
-    } else{
+    } else {
         document.querySelector("#email-invalid").style.display = "none";
         document.querySelector("#email-valid").style.display = "block";
         document.querySelector("#contact-email").style.border = "solid 3px #3db166";
     }
 }
 
-function phoneContactValidation(){
+function phoneContactValidation() {
     const phone = document.getElementById('contact-phone');
     const regExpression = /^[1][0-9]{10}$/;
-    if(!regExpression.test(phone.value)){
+    if (!regExpression.test(phone.value)) {
         document.querySelector("#phone-invalid").style.display = "block";
         document.querySelector("#phone-valid").style.display = "none";
         document.querySelector("#contact-phone").style.border = "solid 3px #cf2716";
-    } else{
+    } else {
         document.querySelector("#phone-invalid").style.display = "none";
         document.querySelector("#phone-valid").style.display = "block";
         document.querySelector("#contact-phone").style.border = "solid 3px #3db166";
     }
 }
 
-function subjectContactValidation(){
+function subjectContactValidation() {
     const subject = document.getElementById('contact-subject');
     const regExpression = /^[a-zA-Z0-9\s,:'".?!()&*#-]{1,100}$/;
-    if(!regExpression.test(subject.value)){
+    if (!regExpression.test(subject.value)) {
         document.querySelector("#subject-invalid").style.display = "block";
         document.querySelector("#subject-valid").style.display = "none";
         document.querySelector("#contact-subject").style.border = "solid 3px #cf2716";
-    } else{
+    } else {
         document.querySelector("#subject-invalid").style.display = "none";
         document.querySelector("#subject-valid").style.display = "block";
         document.querySelector("#contact-subject").style.border = "solid 3px #3db166";
     }
 }
 
-function msgContactValidation(){
+function msgContactValidation() {
     const msg = document.getElementById('contact-msg');
     const regExpression = /[\s\S]*/;
-    if(!regExpression.test(msg.value)){
+    if (!regExpression.test(msg.value)) {
         document.querySelector("#msg-invalid").style.display = "block";
         document.querySelector("#msg-valid").style.display = "none";
         document.querySelector("#contact-msg").style.border = "solid 3px #cf2716";
-    } else{
+    } else {
         document.querySelector("#msg-invalid").style.display = "none";
         document.querySelector("#msg-valid").style.display = "block";
         document.querySelector("#contact-msg").style.border = "solid 3px #3db166";
@@ -199,15 +199,15 @@ function msgContactValidation(){
 
 // Login Form REGEX
 
-function emailLoginValidation(){
+function emailLoginValidation() {
     const email = document.getElementById('login-email');
     const regExpression = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/;
-    if(!regExpression.test(email.value)){
+    if (!regExpression.test(email.value)) {
         document.querySelector("#email-invalid").style.display = "block";
         document.querySelector("#email-valid").style.display = "none";
         document.querySelector("#login-email").style.border = "solid 3px #cf2716";
         document.querySelector("#email-error").style.display = "block";
-    } else{
+    } else {
         document.querySelector("#email-invalid").style.display = "none";
         document.querySelector("#email-valid").style.display = "block";
         document.querySelector("#login-email").style.border = "solid 3px #3db166";
@@ -215,15 +215,15 @@ function emailLoginValidation(){
     }
 }
 
-function passwordLoginValidation(){
+function passwordLoginValidation() {
     const password = document.getElementById('login-password');
     const regExpression = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,20}$/;
-    if(!regExpression.test(password.value)){
+    if (!regExpression.test(password.value)) {
         document.querySelector("#password-invalid").style.display = "block";
         document.querySelector("#password-valid").style.display = "none";
         document.querySelector("#login-password").style.border = "solid 3px #cf2716";
         document.querySelector("#password-error").style.display = "block";
-    } else{
+    } else {
         document.querySelector("#password-invalid").style.display = "none";
         document.querySelector("#password-valid").style.display = "block";
         document.querySelector("#login-password").style.border = "solid 3px #3db166";

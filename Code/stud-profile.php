@@ -1,10 +1,14 @@
+<?php
+    include 'includes/login_check.php';
+    session_start(); 
+?>
 <!DOCTYPE html>
 <html>
 
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Login</title>
+    <title>STD</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='styles.css'>
     <script src='main.js'></script>
@@ -12,7 +16,7 @@
 
 <body>
     <!-- Nav Bar -->
-
+    
     <nav>
         <input id="nav-toggle" type="checkbox">
         <div class="logo"><img src="images/logo_navbar.png" alt="Logo">
@@ -32,80 +36,66 @@
             <div class="line"></div>
         </label>
     </nav>
-
+    
     <!-- End of Nav Bar -->
-    <!-- Contact Header -->
+    <!-- Student Profile-->
+    <div class="stud-background">
+        <div class="std-profile">
+            <div class="logout"><a href="login.php">Logout</a></div>
 
-    <div class="contact-header">
-        <div class="page-title">
-            <span>Get In Touch</span>
-            <h3>Contact Us</h3>
+            <!-- Collecting student data from database to display in profile -->
+            <?php
+            // storing session from login_check.php in $ID_std
+            $ID_std = $_SESSION['ID_Std'];
+
+                $student_details = mysqli_query($connection, "SELECT * FROM visitor, student, subjects, marks WHERE visitor.idV = $ID_std  AND student.idV = visitor.idV AND student.idStu = marks.idStu AND subjects.idSub = marks.idSub AND subjects.subject_name = 'math'");
+                
+                $student_english = mysqli_query($connection, "SELECT marks.mark FROM visitor, student, subjects, marks WHERE visitor.idV = $ID_std AND student.idStu = marks.idStu AND subjects.idSub = marks.idSub and subjects.subject_name = 'english'");
+
+                 // While Loop to display row of data from database in student profile
+                while(($row = $student_details->fetch_assoc()) && ($row_english = $student_english->fetch_assoc())){
+                ?>
+                <div class="stud-rows">
+                <div class="stud-row">
+                    <p class="stud-info">Name</p>
+                    <p class="stud-info-display"><?php echo $row['full_name']; ?></p>
+                </div>
+                <div class="stud-row">
+                    <p class="stud-info">Email</p>
+                    <p class="stud-info-display"><?php echo $row['adress']; ?></p>
+                </div>
+                <div class="stud-row">
+                    <p class="stud-info">Gender</p>
+                    <p class="stud-info-display"><?php echo $row['gender']; ?></p>
+                </div>
+                <div class="stud-row">
+                    <p class="stud-info">Age</p>
+                    <p class="stud-info-display"><?php echo $row['age']; ?></p>
+                </div>
+                <div class="stud-row">
+                    <p class="stud-info">Adress</p>
+                    <p class="stud-info-display"><?php echo $row['adress']; ?></p>
+                </div>
+                <div class="stud-row">
+                    <p class="stud-info">Class</p>
+                    <p class="stud-info-display"><?php echo $row['class']; ?></p>
+                </div>
+                <div class="stud-row">
+                    <p class="stud-info">Math Mark</p>
+                    <p class="stud-info-display"><?php echo $row['mark']; ?></p>
+                </div>
+                <div class="stud-row">
+                    <p class="stud-info">English Mark</p>
+                    <p class="stud-info-display"><?php echo $row_english['mark']; ?></p>
+                </div>
+            </div>
+            <?php } ?> 
         </div>
     </div>
+    <!-- End Student Profile-->
 
-    <!-- End of Contact Header -->
-    <!-- Contact Info -->
-
-    <div class="contact-info">
-        <div class="info-box">
-            <img src="icons/location-icon.png" alt="Location icon">
-            <span>Location</span>
-            <p>Sed id semper risus in hendrerit.</p>
-        </div>
-        <div class="info-box">
-            <img src="icons/phone-icon.png" alt="Phone icon">
-            <span>Phone</span>
-            <p>+1(123) 456 7890</p>
-        </div>
-        <div class="info-box">
-            <img src="icons/mail-icon.png" alt="Email icon">
-            <span>Email</span>
-            <p>contact@mariana.com</p>
-        </div>
-    </div>
-
-    <!-- End of Contact Info -->
-    <!-- Contact form -->
-    <div class="contact-form">
-        <span>Drop us a Message for any Query</span>
-        <form action="" autocomplete="off">
-            <div class="input-row">
-                <input type="text" id="contact-name" placeholder="Your Name" onkeyup="nameContactValidation()">
-                <img id="name-invalid" src="icons/invalid-icon.png" alt="invalid icon">
-                <img id="name-valid" src="icons/save-popup.png" alt="valid icon">
-            </div>
-            <div class="input-row">
-                <input type="text" id="contact-email" placeholder="Your Email" onkeyup="emailConatctValidation()">
-                <img id="email-invalid" src="icons/invalid-icon.png" alt="invalid icon">
-                <img id="email-valid" src="icons/save-popup.png" alt="valid icon">
-            </div>
-            <div class="input-row">
-                <input type="text" id="contact-phone" placeholder="Your Phone" onkeyup="phoneContactValidation()">
-                <img id="phone-invalid" src="icons/invalid-icon.png" alt="invalid icon">
-                <img id="phone-valid" src="icons/save-popup.png" alt="valid icon">
-            </div>
-            <div class="input-row">
-                <input type="text" id="contact-subject" placeholder="Your Subject" onkeyup="subjectContactValidation()">
-                <img id="subject-invalid" src="icons/invalid-icon.png" alt="invalid icon">
-                <img id="subject-valid" src="icons/save-popup.png" alt="valid icon">
-            </div>
-            <div class="input-row">
-                <textarea name="" id="contact-msg" placeholder="Your Message" onkeyup="msgContactValidation()"></textarea>
-                <img id="msg-invalid" src="icons/invalid-icon.png" alt="invalid icon">
-                <img id="msg-valid" src="icons/save-popup.png" alt="valid icon">
-            </div>
-            <button>Submit</button>
-        </form>
-    </div>
-
-    <!-- End of Contact form -->
-    <!-- Map -->
-
-    <iframe
-        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12224.510270894807!2d-75.093961!3d40.005598!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe30786bf46090b53!2sMariana%20Bracetti%20Academy%20Charter%20School!5e0!3m2!1sfr!2sma!4v1615212802084!5m2!1sfr!2sma"
-        style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-
-    <!-- End of Map -->
+<hr class="footer-hr">
+    
     <!-- Footer-->
 
     <footer>

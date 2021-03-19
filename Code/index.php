@@ -1,13 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Login</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='styles.css'>
-    <script src='main.js'></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
 </head>
 
 <body>
@@ -34,80 +36,131 @@
     </nav>
 
     <!-- End of Nav Bar -->
-    <!-- Contact Header -->
+    <!-- Hero Section -->
 
-    <div class="contact-header">
-        <div class="page-title">
-            <span>Get In Touch</span>
-            <h3>Contact Us</h3>
+    <div class="img-container">
+        <div class="inner-container">
+            <h1 class="hero_title">Education is the key to <span>Success</span></h1>
+            <p class="hero_paragraphe">Making an Impact on</br> Classrooms and Communities</p>
+            <button>Explore Now</button>
         </div>
     </div>
 
-    <!-- End of Contact Header -->
-    <!-- Contact Info -->
+    <!-- End of Hero Section -->
+    <!-- Start of Div -->
 
-    <div class="contact-info">
-        <div class="info-box">
-            <img src="icons/location-icon.png" alt="Location icon">
-            <span>Location</span>
-            <p>Sed id semper risus in hendrerit.</p>
+    <div class="space_div"></div>
+
+    <!-- End of Div -->
+    <!--- Section 1 -->
+
+    <h2 class="section_title1">Browse Our Curriculum</h2>
+
+    <div class="container">
+
+        <div class="box">
+            <center><img class="box_img" src="icons/chip.png" alt="#"></center>
+            <center>
+                <h3 class="box_txt">Technology</h3>
+            </center>
         </div>
-        <div class="info-box">
-            <img src="icons/phone-icon.png" alt="Phone icon">
-            <span>Phone</span>
-            <p>+1(123) 456 7890</p>
+
+        <div class="box">
+            <center><img class="box_img" src="icons/science.png" alt="#"></center>
+
+            <center>
+                <h3 class="box_txt">Science</h3>
+            </center>
         </div>
-        <div class="info-box">
-            <img src="icons/mail-icon.png" alt="Email icon">
-            <span>Email</span>
-            <p>contact@mariana.com</p>
+        <div class="box">
+            <center><img class="box_img" src="icons/Humanity.png" alt="#"></center>
+            <center>
+                <h3 class="box_txt">Humanities</h3>
+            </center>
+        </div>
+
+        <div class="box">
+            <center><img class="box_img" src="icons/language.png" alt="#"></center>
+            <center>
+                <h3 class="box_txt">Language</h3>
+            </center>
+        </div>
+
+        <div class="box">
+            <center><img class="box_img" src="icons/business.png" alt="#"></center>
+            <center>
+                <h3 class="box_txt">Business</h3>
+            </center>
+        </div>
+
+        <div class="box">
+            <center><img class="box_img" src="icons/art.png" alt="#"></center>
+            <center>
+                <h3 class="box_txt">Arts</h3>
+            </center>
+        </div>
+
+        <div class="box">
+            <center><img class="box_img" src="icons/math.png" alt="#"></center>
+            <center>
+                <h3 class="box_txt">Math</h3>
+            </center>
+        </div>
+
+        <div class="box">
+            <center><img class="box_img" src="icons/sport.png" alt="#"></center>
+            <center>
+                <h3 class="box_txt">Sports</h3>
+            </center>
         </div>
     </div>
 
-    <!-- End of Contact Info -->
-    <!-- Contact form -->
-    <div class="contact-form">
-        <span>Drop us a Message for any Query</span>
-        <form action="" autocomplete="off">
-            <div class="input-row">
-                <input type="text" id="contact-name" placeholder="Your Name" onkeyup="nameContactValidation()">
-                <img id="name-invalid" src="icons/invalid-icon.png" alt="invalid icon">
-                <img id="name-valid" src="icons/save-popup.png" alt="valid icon">
-            </div>
-            <div class="input-row">
-                <input type="text" id="contact-email" placeholder="Your Email" onkeyup="emailConatctValidation()">
-                <img id="email-invalid" src="icons/invalid-icon.png" alt="invalid icon">
-                <img id="email-valid" src="icons/save-popup.png" alt="valid icon">
-            </div>
-            <div class="input-row">
-                <input type="text" id="contact-phone" placeholder="Your Phone" onkeyup="phoneContactValidation()">
-                <img id="phone-invalid" src="icons/invalid-icon.png" alt="invalid icon">
-                <img id="phone-valid" src="icons/save-popup.png" alt="valid icon">
-            </div>
-            <div class="input-row">
-                <input type="text" id="contact-subject" placeholder="Your Subject" onkeyup="subjectContactValidation()">
-                <img id="subject-invalid" src="icons/invalid-icon.png" alt="invalid icon">
-                <img id="subject-valid" src="icons/save-popup.png" alt="valid icon">
-            </div>
-            <div class="input-row">
-                <textarea name="" id="contact-msg" placeholder="Your Message" onkeyup="msgContactValidation()"></textarea>
-                <img id="msg-invalid" src="icons/invalid-icon.png" alt="invalid icon">
-                <img id="msg-valid" src="icons/save-popup.png" alt="valid icon">
-            </div>
-            <button>Submit</button>
-        </form>
+    <div class="view_more_btn">
+        <button>View More</button>
     </div>
 
-    <!-- End of Contact form -->
-    <!-- Map -->
+    <!-- End of Section 1 -->
+    <!-- Start of Div -->
 
-    <iframe
-        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12224.510270894807!2d-75.093961!3d40.005598!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe30786bf46090b53!2sMariana%20Bracetti%20Academy%20Charter%20School!5e0!3m2!1sfr!2sma!4v1615212802084!5m2!1sfr!2sma"
-        style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    <div class="space_div"></div>
 
-    <!-- End of Map -->
+    <!-- End of Div -->
+    <!-- Section 2 About us -->
+
+    <h2 class="section_title1">About Us</h2>
+
+    <div class="container_about_us">
+        <div class="img">
+            <img src="images/home-about.png" alt="about_us">
+        </div>
+        <div class="txt">
+            <p class="txt_para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic inventore soluta mollitia.
+                Pariatur, fuga necessitatibus. Fuga officiis saepe nesciunt vitae ducimus maxime odio, tempore
+                consequatur. Eius, asperiores. Debitis placeat magnam, minima
+                animi sunt, tenetur suscipit odio aperiam enim praesentium modi possimus velit nobis dolorem in dolore
+                optio commodi dolores eveniet nesciunt incidunt, explicabo consequuntur facilis. Quas exercitationem
+                error laborum labore! Modi vel
+                veritatis hic voluptatibus accusamus deleniti expedita repellat, neque porro culpa non sint temporibus
+                sit placeat, ex soluta ea quae magnam quia mollitia, minus asperiores corrupti? Assumenda ipsam
+                consequuntur autem voluptate? In autem
+                magnam quibusdam at molestias facere nihil libero quasi vitae et, iure, quos repellat nulla suscipit
+                aliquid corporis temporibus fugiat enim quo? Repellat omnis perferendis esse blanditiis tenetur optio
+                vitae quae. Maiores harum error
+                numquam vitae alias architecto a optio, totam quod perspiciatis dolorem itaque mollitia fugit porro,
+                soluta, iusto facere esse ratione debitis dignissimos non molestias fugiat sed! Neque molestias eligendi
+                cumque itaque vel. Quibusdam,
+                consequatur!
+            </p>
+        </div>
+    </div>
+    <!-- End of Section 2 About us -->
+    <!-- Start of Div -->
+
+    <div class="space_div"></div>
+
+    <!-- End of Div -->
     <!-- Footer-->
-
+    
     <footer>
         <div class="col1">
             <img src="images/logo_footer.png" alt="Mariana School Logo">
@@ -173,7 +226,7 @@
             </ul>
         </div>
     </footer>
-
+    
     <!-- End Footer-->
 </body>
 
